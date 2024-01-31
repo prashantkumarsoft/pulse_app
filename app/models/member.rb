@@ -1,6 +1,8 @@
 class Member < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :gender, presence: true
+  validates :role, presence: true
 
   has_one_attached :avatar
   has_many :opportunities

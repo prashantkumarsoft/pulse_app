@@ -3,4 +3,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :members, only: [:create] do
+    get :doctors, on: :collection
+    get :patients, on: :collection
+  end
+
+  resources :opportunities, only: [:index, :create, :update, :destroy] do
+    post :move_to_next_stage, on: :member
+    get :search, on: :collection
+  end
 end
