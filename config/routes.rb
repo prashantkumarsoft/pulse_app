@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :opportunities, only: [:index, :create, :update, :destroy] do
-    post :move_to_next_stage, on: :member
-    get :search, on: :collection
+    patch :move_to_next_stage, on: :member
+    post :search, on: :collection
   end
 end
