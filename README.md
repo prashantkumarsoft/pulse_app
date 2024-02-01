@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Prerequisites
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+Git
+Ruby 3.2.0
+Rails 7.0.8
+PostgreSQL
 
-* Ruby version
+* Setup Instructions
 
-* System dependencies
+  1. Check out the repository
+  git clone git@github.com:organization/project-name.git
 
-* Configuration
+  2. Install dependencies:
+    bundle install
 
-* Database creation
+  3. Set up the database:
+    rails db:create
+    rails db:migrate
 
-* Database initialization
+  4. Seed the database with sample data:
+    rails db:seed
 
-* How to run the test suite
+* Database Configuration
 
-* Services (job queues, cache servers, search engines, etc.)
+  This project uses PostgreSQL as its database. Make sure you have PostgreSQL installed on your system. You can configure the database connection in config/database.yml if needed.
+  
+* Running the Application
+  rails server
 
-* Deployment instructions
-
-* ...
+* Testing
+    rspec
